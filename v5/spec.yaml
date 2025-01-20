@@ -13,7 +13,7 @@ info:
     </figure>
 
     The model provides an overview of how the objects on which the API is specified are related. The overarching concept educations is not found in the in the end points of the API. The smaller concepts of programOffering, courseOffering and conceptOffering are all found in the offering endpoint. The different types of association can all be found in the association endpoint.
-    
+
     The original file for this model can be found <a target="_blank" href="OOAPIv5_model_v0.5.drawio">here</a>
 
     The program relations object is not found as a separate endpoint but relations between programs can be found within the program endpoint by expanding that endpoint.
@@ -61,14 +61,14 @@ tags:
           <br>Alternatively the association can also be created through POST <a href="#tag/associations/paths/~1associations~1me/post">/associations/me</a>
          </td>
          -->
-         <td>POST <a href="#tag/associations/paths/~1associations~1external~1me/post">/associations/external/me</a> gets student details from .wellknown at home institution. It passes offering details (provided by external institution) to the home institution so the home institution can create a placeholder for the offering and its results. 
+         <td>POST <a href="#tag/associations/paths/~1associations~1external~1me/post">/associations/external/me</a> gets student details from .wellknown at home institution. It passes offering details (provided by external institution) to the home institution so the home institution can create a placeholder for the offering and its results.
          </td>
         </tr>
         <tr>
          <td>external</td>
           <!--
           <td>
-          This method is not yet implemented it requires full student details and offering details. This would mean the 
+          This method is not yet implemented it requires full student details and offering details. This would mean the
           OOAPI message would contain more than one resource in the message. At the moment the student mobility project is looking into
           a sollution.
           <br> Alternatively it could be achieved through using two calls:
@@ -83,8 +83,8 @@ tags:
         </tr>
       </table>
       Direct update of current information: <a href="#tag/associations/paths/~1associations~1{associationId}/patch"> PATCH /associations/{associationId}</a>
-      This call is currently limited to passing results and a remote state. For future use other association resource information could be passed. 
-      More information on the support for student mobility can be found 
+      This call is currently limited to passing results and a remote state. For future use other association resource information could be passed.
+      More information on the support for student mobility can be found
       <a href="https://swimlanes.io/d/s5mfpj7Si">here</a>
 
   - name: buildings
@@ -185,7 +185,7 @@ tags:
 
 x-tagGroups:
   - name: Requests and respones
-    tags: 
+    tags:
       - service metadata
       - academic sessions
       - associations
@@ -229,24 +229,24 @@ components:
       type: openIdConnect
       openIdConnectUrl: https://example.nl/.well-known/openid-configuration
   schemas:
-    # allOf: 
-    #   - $ref: 'schemas/Service.yaml'
-    #   - $ref: schemas/AcademicSession.yaml
-    #   - $ref: schemas/Building.yaml
-    #   - $ref: schemas/Component.yaml
-    #   - $ref: schemas/ComponentOffering.yaml
-    #   - $ref: schemas/Course.yaml
-    #   - $ref: schemas/CourseOffering.yaml
-    #   - $ref: schemas/EducationSpecification.yaml
-    #   - $ref: schemas/Group.yaml
-    #   - $ref: schemas/NewsFeed.yaml
-    #   - $ref: schemas/NewsItem.yaml
-    #   - $ref: schemas/Organization.yaml
-    #   - $ref: schemas/Person.yaml
-    #   - $ref: schemas/Program.yaml
-    #   - $ref: schemas/ProgramOffering.yaml
-    #   - $ref: schemas/Room.yaml
-    #   - $ref: schemas/AssociationFull.yaml
+    allOf:
+      - $ref: 'schemas/Service.yaml'
+      - $ref: schemas/AcademicSession.yaml
+      - $ref: schemas/Building.yaml
+      - $ref: schemas/Component.yaml
+      - $ref: schemas/ComponentOffering.yaml
+      - $ref: schemas/Course.yaml
+      - $ref: schemas/CourseOffering.yaml
+      - $ref: schemas/EducationSpecification.yaml
+      - $ref: schemas/Group.yaml
+      - $ref: schemas/NewsFeed.yaml
+      - $ref: schemas/NewsItem.yaml
+      - $ref: schemas/Organization.yaml
+      - $ref: schemas/Person.yaml
+      - $ref: schemas/Program.yaml
+      - $ref: schemas/ProgramOffering.yaml
+      - $ref: schemas/Room.yaml
+      - $ref: schemas/AssociationFull.yaml
 
 paths:
   /:
