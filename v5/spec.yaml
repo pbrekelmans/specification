@@ -230,7 +230,7 @@ components:
       openIdConnectUrl: https://example.nl/.well-known/openid-configuration
   schemas:
     allOf:
-      - $ref: 'schemas/Service.yaml'
+      - $ref: schemas/Service.yaml
       - $ref: schemas/AcademicSession.yaml
       - $ref: schemas/Building.yaml
       - $ref: schemas/Component.yaml
