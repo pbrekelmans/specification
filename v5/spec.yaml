@@ -229,24 +229,40 @@ components:
       type: openIdConnect
       openIdConnectUrl: https://example.nl/.well-known/openid-configuration
   schemas:
-    allOf:
-      - $ref: schemas/Service.yaml
-      - $ref: schemas/AcademicSession.yaml
-      - $ref: schemas/Building.yaml
-      - $ref: schemas/Component.yaml
-      - $ref: schemas/ComponentOffering.yaml
-      - $ref: schemas/Course.yaml
-      - $ref: schemas/CourseOffering.yaml
-      - $ref: schemas/EducationSpecification.yaml
-      - $ref: schemas/Group.yaml
-      - $ref: schemas/NewsFeed.yaml
-      - $ref: schemas/NewsItem.yaml
-      - $ref: schemas/Organization.yaml
-      - $ref: schemas/Person.yaml
-      - $ref: schemas/Program.yaml
-      - $ref: schemas/ProgramOffering.yaml
-      - $ref: schemas/Room.yaml
-      - $ref: schemas/AssociationFull.yaml
+      Service:
+        $ref: schemas/Service.yaml
+      AcademicSession:
+        $ref: schemas/AcademicSession.yaml
+      Building:
+        $ref: schemas/Building.yaml
+      Component:
+        $ref: schemas/Component.yaml
+      ComponentOffering:
+        $ref: schemas/ComponentOffering.yaml
+      Course:
+        $ref: schemas/Course.yaml
+      CourseOffering:
+        $ref: schemas/CourseOffering.yaml
+      EducationSpecification:
+        $ref: schemas/EducationSpecification.yaml
+      Group:
+        $ref: schemas/Group.yaml
+      NewsFeed:
+        $ref: schemas/NewsFeed.yaml
+      NewsItem:
+        $ref: schemas/NewsItem.yaml
+      Organization:
+        $ref: schemas/Organization.yaml
+      Person:
+        $ref: schemas/Person.yaml
+      Program:
+        $ref: schemas/Program.yaml
+      ProgramOffering:
+        $ref: schemas/ProgramOffering.yaml
+      Room:
+        $ref: schemas/Room.yaml
+      AssociationFull:
+        $ref: schemas/AssociationFull.yaml
 
 paths:
   /:
